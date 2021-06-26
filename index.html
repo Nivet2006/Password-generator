@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Password Generator</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='https://fonts.googleapis.com/css?family=Kanit:300,500,700'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+  <div class="title-section">
+    <h1 align="center"  class="title">Password Generator</h1>
+  </div>
+    
+  <div class="inner-section">
+    <div class="password-section">
+    <div class="pass-field" id="pass-field">
+    Generating...</div>
+  </div>
+    <button id="copy" class="copy">Copy password</button>
+        <div class="alert" id="alert"><span class="message" id="message"></span>
+        </div>
+  <p class="info">Select the options needed and then, click the "Generate" button to get your generated password above. If your satisfied with the password provided then click on copy.</p>
+  <div class="controls">
+    <div class="control length" id="length-box" >
+      <label for="length">Password Length:</label>
+      <input type="range" id='length' min="4" max="20" list="ranges">
+      <datalist id="ranges">
+        <option value="4" label="4">
+        <option value="5">
+        <option value="6">
+        <option value="7">
+        <option value="8">        
+        <option value="9">
+        <option value="10">
+        <option value="11">
+        <option value="12" label="12">
+        <option value="13">
+        <option value="14">
+        <option value="15">
+        <option value="16">
+        <option value="17">
+        <option value="18">
+        <option value="19">
+        <option value="20">
+      </datalist>
+    </div>
+    <div class="control">
+      <input type="checkbox" id="lowercase">
+      <label class="check-label" for="lowercase"><span class="checkbox">Use Lowercase Characters(a-z)</span></label>
+    </div>
+    <div class="control">
+      <input type="checkbox" id="uppercase">
+      <label class="check-label" for="uppercase"><span class="checkbox">Use Uppercase Characters(A-Z)</span></label>
+    </div>
+    <div class="control">
+      <input type="checkbox" id="numbers">
+      <label class="check-label" for="numbers"><span class="checkbox">Use Numbers(0-9)</span></label>
+    </div>
+    <div class="control">
+      <input type="checkbox" id="punctuation">
+      <label class="check-label" for="punctuation"><span class="checkbox">Use special characters(@,#,^,$)</span></label>
+    </div>
+    
+    <button class="generate" id="generate">Generate Password!</button>
+  </div>
+  </div>
+</div>
+      
+<script src='https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js'>
+</script>
+<script  src="function.js"></script>
+     
+</body>
+</html>
